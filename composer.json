@@ -1,0 +1,49 @@
+{
+  "name": "alptis/wordpress-healthcheck",
+  "description": "WordPress plugin exposing healthcheck endpoints compatible with LiipMonitorBundle",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "keywords": [
+    "wordpress",
+    "wordpress-plugin",
+    "healthcheck",
+    "health-check",
+    "monitoring",
+    "liip-monitor"
+  ],
+  "authors": [
+    {
+      "name": "Frédéric Biesse"
+    },
+    {
+      "name": "Alptis",
+      "homepage": "https://www.alptis.org"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "composer/installers": "^1.0 || ^2.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.93"
+  },
+  "autoload": {
+    "psr-4": {
+      "Alptis\\Wordpress\\Healthcheck\\": "src/"
+    }
+  },
+  "scripts": {
+    "lint": "php-cs-fixer check --diff",
+    "lint:fix": "php-cs-fixer fix"
+  },
+  "scripts-descriptions": {
+    "lint": "Check coding standards",
+    "lint:fix": "Automatically fix coding standard violations"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}
